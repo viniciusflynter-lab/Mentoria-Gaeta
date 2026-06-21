@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Mentoria Gaeta - Maestria em Massoterapia</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <style>
+        .font-sans-limpa { font-family: 'Inter', sans-serif; }
+        .font-serif-elegant { font-family: 'Playfair Display', serif; }
+        
+        /* Sand / Off-white Background */
+        body {
+            background-color: #FAF9F6; /* Off-white / Sand */
+            color: #2D2D2D;
+        }
+
+        /* Glass / Floating Panel */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.04);
+        }
+
+        .glass-button {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(220, 215, 205, 0.5);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+        
+        .premium-shadow {
+            box-shadow: 0 25px 50px -12px rgba(45, 45, 45, 0.15);
+        }
+    </style>
+</head>
+<body class="font-sans-limpa min-h-screen relative overflow-x-hidden selection:bg-[#E8E3DB] selection:text-[#2D2D2D]">
+    
+    <!-- Ambient Background / Soft Glows -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] right-[-5%] w-[600px] lg:w-[800px] h-[600px] lg:h-[800px] bg-[#F2EFE9] rounded-full blur-[100px] opacity-80"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[500px] lg:w-[700px] h-[500px] lg:h-[700px] bg-[#E8E3DB] rounded-full blur-[120px] opacity-60"></div>
+    </div>
+
+    <!-- Navigation (Minimal) -->
+    <nav class="relative z-50 w-full px-6 md:px-12 py-6 flex items-center justify-between max-w-[1400px] mx-auto">
+        <div class="flex items-center gap-3">
+            <span class="font-serif-elegant text-2xl md:text-3xl font-medium tracking-tight text-[#2D2D2D]">GAETA</span>
+        </div>
+        <div class="hidden md:flex gap-10 text-sm font-medium tracking-wide text-[#6B655B]">
+            <a href="#" class="hover:text-[#2D2D2D] transition-colors">A Mentoria</a>
+            <a href="#" class="hover:text-[#2D2D2D] transition-colors">Depoimentos</a>
+            <a href="#" class="hover:text-[#2D2D2D] transition-colors">Módulos</a>
+        </div>
+        <a href="#" class="hidden md:flex items-center gap-2 text-xs font-semibold uppercase tracking-widest bg-[#2D2D2D] text-[#FAF9F6] py-3.5 px-7 rounded-full hover:bg-[#404040] transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            Aplicar Agora
+        </a>
+        <button class="md:hidden text-[#2D2D2D]">
+            <iconify-icon icon="solar:hamburger-menu-linear" width="28"></iconify-icon>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-12 pb-24 min-h-[calc(100vh-120px)] flex items-center">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-center w-full">
+            
+            <!-- Left Column: Copy -->
+            <div class="lg:col-span-6 flex flex-col items-start relative z-20">
+                <!-- Tag -->
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-button mb-8">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8C7A6B] opacity-50"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#8C7A6B]"></span>
+                    </span>
+                    <span class="text-xs font-semibold tracking-widest text-[#6B655B] uppercase">Mentoria Gaeta</span>
+                </div>
+
+                <!-- Headlines -->
+                <h1 class="text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.05] font-serif-elegant text-[#2D2D2D] mb-6">
+                    Uma boa técnica <br />
+                    <span class="italic text-[#8C7A6B]">abre portas.</span>
+                </h1>
+                
+                <h2 class="text-2xl md:text-3xl lg:text-4xl leading-snug font-serif-elegant text-[#6B655B] mb-10 font-light">
+                    Mas é a experiência que faz as clientes <span class="italic font-medium text-[#2D2D2D]">permanecerem.</span>
+                </h2>
+
+                <!-- Paragraph -->
+                <p class="text-lg text-[#6B655B] font-sans-limpa font-light leading-relaxed max-w-xl mb-12 border-l-2 border-[#DCD7CD] pl-6">
+                    Você não precisa de mais um curso de técnicas de massagem. Vá além das manobras e domine o posicionamento, o comportamento e os detalhes de atendimento que lotam a sua agenda com clientes de alto valor.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+                    <button class="flex items-center justify-center gap-3 bg-[#2D2D2D] hover:bg-[#404040] text-[#FAF9F6] px-8 py-4.5 rounded-full font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                        <span class="font-sans-limpa text-[15px] tracking-wide">Quero ser uma aluna Maestria</span>
+                        <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                    </button>
+                    
+                    <button class="flex items-center justify-center gap-3 glass-button px-8 py-4.5 rounded-full font-medium text-[#4A453F] transition-all hover:bg-white hover:shadow-md">
+                        <iconify-icon icon="solar:play-circle-linear" width="22" class="text-[#8C7A6B]"></iconify-icon>
+                        <span class="font-sans-limpa text-[15px] tracking-wide">Ver depoimentos</span>
+                    </button>
+                </div>
+                
+                <!-- Trust indicators -->
+                <div class="mt-14 flex items-center gap-6 opacity-80">
+                    <div class="flex -space-x-3">
+                        <img src="https://i.pravatar.cc/100?img=5" class="w-11 h-11 rounded-full border-2 border-[#FAF9F6] object-cover" alt="Aluna"/>
+                        <img src="https://i.pravatar.cc/100?img=9" class="w-11 h-11 rounded-full border-2 border-[#FAF9F6] object-cover" alt="Aluna"/>
+                        <img src="https://i.pravatar.cc/100?img=1" class="w-11 h-11 rounded-full border-2 border-[#FAF9F6] object-cover" alt="Aluna"/>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex text-[#D4AF37] gap-0.5">
+                            <iconify-icon icon="solar:star-bold" width="16"></iconify-icon>
+                            <iconify-icon icon="solar:star-bold" width="16"></iconify-icon>
+                            <iconify-icon icon="solar:star-bold" width="16"></iconify-icon>
+                            <iconify-icon icon="solar:star-bold" width="16"></iconify-icon>
+                            <iconify-icon icon="solar:star-bold" width="16"></iconify-icon>
+                        </div>
+                        <span class="text-xs font-medium text-[#6B655B] mt-1 tracking-wide">+500 alunas transformadas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Video Focus -->
+            <div class="lg:col-span-6 relative w-full h-full flex items-center justify-center mt-12 lg:mt-0">
+                <!-- Decorative Elements -->
+                <div class="absolute top-[-5%] right-[-5%] w-32 h-32 border border-[#DCD7CD] rounded-full opacity-60"></div>
+                <div class="absolute bottom-[-10%] left-[-5%] w-48 h-48 border border-[#DCD7CD] rounded-full opacity-40"></div>
+                
+                <!-- Main Video Container -->
+                <div class="relative w-full aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-w-[480px] mx-auto glass-panel rounded-[3rem] p-3.5 premium-shadow transform lg:rotate-2 hover:rotate-0 transition-all duration-700 ease-out group">
+                    
+                    <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden bg-[#E8E3DB]">
+                        <!-- Image placeholder for VTurb Video -->
+                        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2000&auto=format&fit=crop" 
+                             alt="Massoterapia Premium" 
+                             class="w-full h-full object-cover opacity-90 transition-transform duration-[1.5s] group-hover:scale-105 filter contrast-[1.1] saturate-[0.8] sepia-[0.15]"/>
+                        
+                        <!-- Overlay gradient for depth -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#2D2D2D]/70 via-[#2D2D2D]/10 to-transparent"></div>
+
+                        <!-- Central Play Button (VTurb style) -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <button class="w-24 h-24 bg-white/10 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 shadow-[0_0_40px_rgba(0,0,0,0.15)] group-hover:shadow-[0_0_50px_rgba(255,255,255,0.25)]">
+                                <iconify-icon icon="solar:play-bold" width="36" class="ml-2"></iconify-icon>
+                            </button>
+                        </div>
+
+                        <!-- Floating Badge Bottom -->
+                        <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                            <div class="glass-button px-5 py-2.5 rounded-full flex items-center gap-2.5 backdrop-blur-md bg-white/80 border-white/60">
+                                <span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                                <span class="text-[10px] font-bold text-[#2D2D2D] uppercase tracking-widest">Assista ao vídeo</span>
+                            </div>
+                            <div class="text-white/90 text-sm font-medium drop-shadow-md tracking-wide">
+                                04:20
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Clean Container 1 -->
+                    <div class="absolute -left-6 lg:-left-12 top-[20%] glass-button p-4 md:p-5 rounded-2xl flex flex-col gap-2 shadow-xl transform -rotate-3 transition-transform hover:rotate-0 hover:-translate-y-1 duration-500">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#F2EFE9] flex items-center justify-center text-[#8C7A6B]">
+                                <iconify-icon icon="solar:spa-linear" width="24"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-[#8C7A6B] font-semibold mb-0.5">Experiência</p>
+                                <p class="text-base font-serif-elegant font-medium text-[#2D2D2D] leading-none">Padrão Ouro</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Clean Container 2 -->
+                    <div class="absolute -right-4 lg:-right-10 bottom-[25%] glass-button p-4 md:p-5 rounded-2xl flex flex-col gap-2 shadow-xl transform rotate-3 transition-transform hover:rotate-0 hover:-translate-y-1 duration-500">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-[#2D2D2D] flex items-center justify-center text-[#FAF9F6]">
+                                <iconify-icon icon="solar:crown-star-linear" width="24"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest text-[#8C7A6B] font-semibold mb-0.5">Posicionamento</p>
+                                <p class="text-base font-serif-elegant font-medium text-[#2D2D2D] leading-none">Alto Valor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>

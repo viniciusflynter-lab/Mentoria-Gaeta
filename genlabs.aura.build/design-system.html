@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Future Finance Learning Lab</title>
+
+<!-- fonts -->
+<link href="assets/css2_d532a689d235.css" rel="stylesheet"/>
+
+<!-- css -->
+<!-- Tailwind utility classes generated and used throughout the page -->
+<link rel="stylesheet" href="assets/css/tailwind-utilities.css"/>
+<!-- Custom components, glass effects, curve separators, carousel animation, border-gradient utility, 3D transform utilities -->
+<link rel="stylesheet" href="assets/css/components.css"/>
+
+<!-- head js: Tailwind runtime + Iconify runtime; both must be available before body parses utility classes -->
+<!-- Tailwind CSS runtime -->
+<script src="assets/resource_3fa48481346f.js"></script>
+<!-- Iconify icon runtime that resolves data-icon attributes -->
+<script src="assets/iconify_654a1ef798a3.js"></script>
+<!-- Tailwind config: registers custom 3D transform/perspective utilities -->
+<script src="assets/js/tailwind-config.js"></script>
+</head>
+<body class="flex min-h-screen bg-center selection:bg-slate-900 selection:text-white xl:p-8 text-slate-800 bg-zinc-500 bg-cover px-0 py-0 relative items-start">
+
+<!-- main-frame -->
+<main class="glass-panel overflow-hidden flex flex-col xl:max-w-[1300px] z-10 xl:border-white/50 border-none xl:border xl:rounded-[2.5rem] md:pt-10 md:pr-10 md:pb-10 md:pl-10 xl:pt-12 xl:pr-12 xl:pb-12 xl:pl-12 xl:shadow-2xl min-h-screen xl:min-h-[700px] w-full rounded-none pt-6 pr-6 pb-6 pl-6 relative shadow-none">
+
+<!-- vertical-grid-lines -->
+<div class="absolute inset-0 flex justify-between pointer-events-none z-0 px-6 md:px-10 xl:px-12 w-full h-full">
+<div class="h-full w-[1px] bg-zinc-950/5"></div>
+<div class="h-full w-[1px] bg-zinc-950/5 hidden md:block"></div>
+<div class="h-full w-[1px] bg-zinc-950/5 hidden lg:block"></div>
+<div class="h-full w-[1px] bg-zinc-950/5 hidden xl:block"></div>
+<div class="h-full w-[1px] bg-zinc-950/5"></div>
+</div>
+
+<!-- header -->
+<header class="flex md:mb-16 md:gap-0 z-10 mb-16 relative gap-x-6 gap-y-6 items-center justify-between">
+<div class="flex items-center gap-2 text-zinc-900">
+<div class="flex text-white bg-gradient-to-b from-black/60 to-black/20 w-8 h-8 rounded-full items-center justify-center" style="position: relative; --border-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)); --border-radius-before: 9999px">
+<svg aria-hidden="true" class="w-[16px] h-[16px]" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" style="width:16px;height:16px;color:rgb(255,255,255)" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3.464 20.536C4.93 22 7.286 22 12 22s7.071 0 8.535-1.465C22 19.072 22 16.714 22 12s0-7.071-1.465-8.536C19.072 2 16.714 2 12 2S4.929 2 3.464 3.464C2 4.93 2 7.286 2 12s0 7.071 1.464 8.535" fill="#ffffff" opacity=".5"/><path d="M9.5 8.75A3.25 3.25 0 1 0 12.75 12a.75.75 0 0 1 1.5 0A4.75 4.75 0 1 1 9.5 7.25a.75.75 0 0 1 0 1.5" fill="#ffffff"/><path d="M17.75 12a3.25 3.25 0 0 1-3.25 3.25a.75.75 0 0 0 0 1.5A4.75 4.75 0 1 0 9.75 12a.75.75 0 0 0 1.5 0a3.25 3.25 0 0 1 6.5 0" fill="#ffffff"/></svg>
+</div>
+<span class="text-lg font-medium tracking-tight">GEN<span class="text-zinc-400">LABS</span></span>
+</div>
+<nav class="hidden md:flex uppercase text-xs font-medium text-zinc-500 tracking-widest bg-white/50 border-white/60 border rounded-full pt-2 pr-6 pb-2 pl-6 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] backdrop-blur-sm gap-x-8 gap-y-8 items-center">
+<a class="hover:text-zinc-900 transition-colors duration-300" href="#">Currículo</a>
+<a class="hover:text-zinc-900 transition-colors duration-300" href="#">Preços</a>
+<a class="hover:text-zinc-900 transition-colors duration-300" href="#">Mentores</a>
+<a class="hover:text-zinc-900 transition-colors duration-300 hidden lg:block" href="#">Comunidade</a>
+</nav>
+<a class="-all flex items-center gap-2 group hover:bg-zinc-50 text-xs font-medium text-zinc-600 tracking-wide bg-gradient-to-b from-black/10 via-black/20 to-black/10 rounded-lg pt-2.5 pr-5 pb-2.5 pl-5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]" href="#" style="box-shadow: 0 18px 35px rgba(31, 41, 55, 0.25), 0 0 0 1px rgba(209, 213, 219, 0.3); color: #e5e7eb; position: relative; --border-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.8)); --border-radius-before: 8px">
+<span class="text-[11px] uppercase font-medium text-black/60 tracking-tight">Entrar na lista</span>
+<i data-lucide="arrow-right" class="w-[14px] h-[14px] group-hover:translate-x-1 transition-transform" style="color:#666;stroke-width:1.5"></i>
+</a>
+</header>
+
+<!-- hero -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 h-full flex-grow relative z-10 pb-8 lg:pb-0">
+
+<!-- hero-text -->
+<div class="lg:col-span-7 flex flex-col pt-4 relative justify-center">
+<div class="inline-flex bg-white/60 w-max rounded-full mb-8 pt-1.5 pr-5 pb-1.5 pl-1.5 shadow-sm backdrop-blur-sm items-center" style="position: relative; --border-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)); --border-radius-before: 9999px">
+<div class="flex -space-x-2 mr-3">
+<img alt="Usuário" class="w-6 h-6 rounded-full border-2 border-white object-cover" src="assets/578a5bc5-2c9f-4285-8ae6-0d7daf_33d785f5e92f.webp"/>
+<img alt="Usuário" class="w-6 h-6 rounded-full border-2 border-white object-cover" src="assets/1a99aa12-9c50-44fe-bb7d-5dfef2_d7bfbddcb034.webp"/>
+<img alt="Usuário" class="w-6 h-6 rounded-full border-2 border-white object-cover" src="assets/2e91b8c7-be64-41b5-8bd8-75efab_c57d7cf9ede8.webp"/>
+<div class="w-6 h-6 rounded-full border-2 border-white bg-zinc-900 text-white flex items-center justify-center text-[9px] font-bold tracking-tighter">2k+</div>
+</div>
+<span class="text-xs font-medium text-zinc-600 tracking-wide"><span class="text-zinc-900">Nova turma</span> começa em 3 dias</span>
+</div>
+<h1 class="leading-[0.95] lg:text-[5rem] text-5xl font-medium text-zinc-900 tracking-tighter mb-8">Finanças Web3 <span class="text-transparent bg-clip-text bg-gradient-to-r from-zinc-400 to-zinc-200 font-light">Lab de Maestria</span></h1>
+<p class="text-sm text-zinc-500 font-medium max-w-md mb-10 leading-relaxed tracking-wide border-l-2 border-zinc-200 pl-6">Desbloqueie o potencial dos mercados descentralizados. Um currículo abrangente desenhado meticulosamente para a próxima geração de investidores em ativos digitais.</p>
+<div class="flex flex-col sm:flex-row gap-3 lg:mb-24 mb-16 gap-x-3 gap-y-3">
+<button class="hover:bg-black transition-all flex group shadow-zinc-900/10 hover:shadow-2xl hover:shadow-zinc-900/20 hover:-translate-y-0.5 text-sm font-medium text-zinc-900 rounded-full pt-3 pr-6 pb-3 pl-6 shadow-xl gap-x-3 gap-y-3 items-center justify-between" style="background: radial-gradient(circle at 10% 0%, #fed7aa 0%, #fb923c 100%); box-shadow: 0 15px 25px -10px rgba(248, 113, 22, 0.7), inset 0 4px 8px rgba(253, 230, 138, 0.9), inset 0 -4px 8px rgba(249, 115, 22, 0.9)">
+<span class="text-sm font-medium tracking-tight text-zinc-900">Iniciar avaliação grátis</span>
+<span class="flex items-center justify-center rounded-full bg-black/10 px-3 py-1">
+<i data-lucide="arrow-up-right" class="group-hover:translate-x-1 transition-transform" style="color:rgb(15,23,42);width:16px;height:16px;stroke-width:1.5"></i>
+</span>
+</button>
+<button class="hover:bg-zinc-50 hover:text-zinc- transition-all flex text-sm font-medium text-zinc-600 bg-gradient-to-b from-black/10 via-black/20 to-black/10 rounded-full pt-3 pr-6 pb-3 pl-6 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] gap-x-2 gap-y-2 items-center" style="box-shadow: 0 18px 35px rgba(31, 41, 55, 0.25), 0 0 0 1px rgba(209, 213, 219, 0.3); color: #e5e7eb; position: relative; --border-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.8)); --border-radius-before: 9999px">
+<span class="text-sm font-medium text-black/60 tracking-tight">Aula demonstrativa</span>
+<i data-lucide="arrow-right" style="color:rgb(229,231,235);width:16px;height:16px;stroke-width:1.5"></i>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 md:gap-6 mt-auto gap-x-2 gap-y-2 items-center">
+<div class="flex items-center group cursor-default">
+<div class="px-1 text-center">
+<p class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest mb-1 group-hover:text-zinc-600 transition-colors">Duração</p>
+<p class="text-sm text-zinc-900 font-medium">8 semanas</p>
+</div>
+<div class="curve-separator opacity-60 ml-4 md:ml-8"></div>
+</div>
+<div class="flex items-center group cursor-default">
+<div class="px-1 text-center">
+<p class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest mb-1 group-hover:text-zinc-600 transition-colors">Nível</p>
+<p class="text-sm text-zinc-900 font-medium">Intermediário</p>
+</div>
+<div class="curve-separator md:ml-8 opacity-60 ml-4"></div>
+</div>
+<div class="flex items-center group cursor-default">
+<div class="px-1 text-center">
+<p class="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest mb-1 group-hover:text-zinc-600 transition-colors">Formato</p>
+<p class="text-sm text-zinc-900 font-medium">Híbrido</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- hero-card -->
+<div class="lg:col-span-5 h-full min-h-[400px] lg:min-h-0 relative group perspective-1000">
+<div class="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl shadow-zinc-900/20 transition-all duration-700 ease-out border border-white/20">
+<img alt="Paisagem de ficção científica" class="transition-transform duration-[2s] ease-in-out group-hover:scale-110 filter saturate-[0.8] w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0" src="assets/96e3ccfa-3799-4c9c-9f2a-263c0f_f43320a4382a.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-zinc-900/10"></div>
+<div class="flex flex-col pt-8 pr-8 pb-8 pl-8 absolute top-0 right-0 bottom-0 left-0 justify-between">
+<div class="flex items-start justify-between">
+<div class="flex gap-2 bg-gradient-to-b from-white/10 to-white/0 rounded-full pt-1.5 pr-3 pb-1.5 pl-3 gap-x-2 gap-y-2 items-center" style="position: relative; --border-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); --border-radius-before: 9999px">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="text-[10px] uppercase font-semibold text-white tracking-wide">Mercado ao vivo</span>
+</div>
+<div class="flex hover:bg-white/20 transition-colors cursor-pointer text-white bg-gradient-to-b from-white/10 to-white/0 w-10 h-10 rounded-full items-center justify-center" style="position: relative; --border-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); --border-radius-before: 9999px">
+<i data-lucide="bell" style="width:18px;height:18px;stroke-width:1.5"></i>
+</div>
+</div>
+<div class="self-end transform group-hover:translate-y-0 transition-transform duration-700 ease-out bg-gradient-to-b from-white/10 to-white/0 w-full max-w-[240px] rounded-xl mt-60 pt-4 pr-4 pb-4 pl-4 backdrop-blur translate-y-4" style="position: relative; --border-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); --border-radius-before: 12px">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-white text-[10px] font-bold">₿</div>
+<span class="text-xs text-white font-medium">Bitcoin</span>
+</div>
+<span class="text-[10px] text-emerald-400 font-mono">+2.4%</span>
+</div>
+<div class="h-12 w-full mb-2 flex items-end gap-1">
+<div class="w-1/5 bg-white/20 rounded-t-sm h-[40%]"></div>
+<div class="w-1/5 bg-white/20 rounded-t-sm h-[70%]"></div>
+<div class="w-1/5 bg-white/20 rounded-t-sm h-[50%]"></div>
+<div class="w-1/5 bg-white/30 rounded-t-sm h-[85%]"></div>
+<div class="w-1/5 bg-emerald-500 rounded-t-sm h-[95%] shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-[9px] text-white/60 uppercase">Valor atual</span>
+<span class="text-sm text-white font-mono font-medium">$64.231</span>
+</div>
+</div>
+</div>
+<div class="overflow-hidden w-full h-[100px] border-white/10 rounded-xl border-t mt-auto pt-4 relative">
+<div class="carousel-track flex flex-col h-[300px]">
+<div class="flex flex-col h-[100px] justify-start">
+<div class="flex gap-3 mb-2 gap-x-3 gap-y-3 items-center">
+<img alt="Avaliadora" class="w-8 h-8 rounded-full object-cover border border-white/20" src="assets/7b1ee7e8-7554-433d-a435-029da3_9bd09ac29fdb.webp"/>
+<div class="flex flex-col">
+<span class="text-white text-xs font-semibold tracking-wide">Elena Stone</span>
+<span class="text-white/50 text-[9px] uppercase tracking-wider">Gestora de portfólio</span>
+</div>
+</div>
+<p class="text-white/80 text-xs font-light leading-relaxed line-clamp-2">"Um ecossistema completo para dominar a economia digital. A interface é impecável e os dados são em tempo real."</p>
+</div>
+<div class="h-[100px] flex flex-col justify-start">
+<div class="flex items-center gap-3 mb-2">
+<img alt="Avaliador" class="w-8 h-8 rounded-full object-cover border border-white/20" src="assets/b3f17582-5cb8-4efd-895a-b59c93_5343306160e6.webp"/>
+<div class="flex flex-col">
+<span class="text-white text-xs font-semibold tracking-wide">Marcus Chen</span>
+<span class="text-white/50 text-[9px] uppercase tracking-wider">Analista DeFi</span>
+</div>
+</div>
+<p class="text-white/80 text-xs font-light leading-relaxed line-clamp-2">"Este lab forneceu o framework exato que eu precisava para entender pools de liquidez e mecanismos de staking."</p>
+</div>
+<div class="h-[100px] flex flex-col justify-start">
+<div class="flex items-center gap-3 mb-2">
+<img alt="Avaliadora" class="w-8 h-8 rounded-full object-cover border border-white/20" src="assets/08cf0e21-ab10-49b1-b896-e0bfbc_49a8ee583926.webp"/>
+<div class="flex flex-col">
+<span class="text-white text-xs font-semibold tracking-wide">Sarah Jenks</span>
+<span class="text-white/50 text-[9px] uppercase tracking-wider">Trader cripto</span>
+</div>
+</div>
+<p class="text-white/80 text-xs font-light leading-relaxed line-clamp-2">"O formato híbrido é perfeito. Pude aprender no meu ritmo e ainda assim receber mentoria."</p>
+</div>
+</div>
+<div class="absolute top-0 left-0 w-full h-4 bg-gradient-to-b from-zinc-900/0 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-zinc-900/50 to-transparent pointer-events-none"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="w-full h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent mt-16 lg:mt-24 mb-16 lg:mb-24 opacity-60"></div>
+
+<!-- defi-stack-bento -->
+<div class="flex flex-col gap-10 z-10 w-full relative gap-x-10 gap-y-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 px-1">
+<div class="max-w-2xl">
+<h2 class="md:text-5xl text-3xl font-medium text-zinc-900 tracking-tighter mb-4">Domine o <span class="bg-clip-text text-transparent bg-gradient-to-b from-neutral-400 to-neutral-600">Stack DeFi</span></h2>
+<p class="leading-relaxed text-base font-normal text-zinc-500">De mecanismos de consenso a estratégias avançadas de yield. Um kit de ferramentas completo desenhado para o arquiteto financeiro moderno.</p>
+</div>
+<a class="group flex items-center gap-2 hover:text-indigo-600 transition-colors text-sm font-normal text-zinc-900 pb-1" href="#">Ver ementa completa
+<svg aria-hidden="true" class="group-hover:translate-x-1 transition-transform" height="1em" role="img" style="font-size:16px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h16m0 0l-6-6m6 6l-6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+</a>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-hidden shadow-zinc-900/5 bg-zinc-200 rounded-[2rem] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] gap-x-px gap-y-px">
+
+<!-- bento-card-governance -->
+<div class="group hover:bg-zinc-50 transition-colors flex flex-col min-h-[340px] bg-white h-full pt-8 pr-8 pb-8 pl-8 relative justify-between">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-3 text-zinc-400">
+<svg aria-hidden="true" height="1em" role="img" style="font-size:24px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="6" fill="currentColor" opacity=".4" r="3"/><ellipse cx="16" cy="17" fill="currentColor" opacity=".4" rx="5" ry="3"/><circle cx="9.001" cy="6" fill="currentColor" r="4"/><ellipse cx="9.001" cy="17.001" fill="currentColor" rx="7" ry="4"/></svg>
+</div>
+<h3 class="text-lg font-semibold text-zinc-900 mb-2 tracking-tight">Governança DAO</h3>
+<p class="text-sm text-zinc-500 font-medium leading-relaxed font-normal">Estruture organizações descentralizadas, gerencie propostas e implemente mecânicas de votação.</p>
+</div>
+<div class="flex flex-col flex-grow mt-8 pt-4 pb-4 relative items-center justify-center">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-32 h-12 border-b border-r border-l border-zinc-200 rounded-b-2xl pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[20%] h-6 w-px bg-zinc-200 pointer-events-none"></div>
+<div class="flex gap-4 mb-6 relative z-10">
+<img alt="Usuário" class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all" src="assets/578a5bc5-2c9f-4285-8ae6-0d7daf_33d785f5e92f.webp"/>
+<img alt="Usuário" class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all" src="assets/1a99aa12-9c50-44fe-bb7d-5dfef2_d7bfbddcb034.webp"/>
+<img alt="Usuário" class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all" src="assets/2e91b8c7-be64-41b5-8bd8-75efab_c57d7cf9ede8.webp"/>
+</div>
+<div class="flex text-[10px] uppercase shadow-zinc-900/20 group-hover:scale-105 transition-transform font-bold text-white tracking-wider bg-zinc-900 rounded-full mt-2 px-4 py-2 shadow-lg gap-x-2 gap-y-2 items-center">
+<svg aria-hidden="true" height="1em" role="img" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10" fill="currentColor" opacity=".5"/><path d="M16.03 8.97a.75.75 0 0 1 0 1.06l-5 5a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 1 1 1.06-1.06l1.47 1.47l2.235-2.235L14.97 8.97a.75.75 0 0 1 1.06 0" fill="currentColor"/></svg>
+<span>Votar</span>
+</div>
+</div>
+</div>
+
+<!-- bento-card-tokenomics -->
+<div class="group relative bg-white hover:bg-zinc-50 transition-colors p-8 flex flex-col justify-between h-full min-h-[340px] md:col-span-2 overflow-hidden">
+<div class="relative z-10 max-w-md">
+<div class="flex items-center gap-2 mb-3 text-zinc-400">
+<svg aria-hidden="true" height="1em" role="img" style="font-size:24px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 22c-4.714 0-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22" fill="currentColor" opacity=".5"/><path d="M12 5.25a.75.75 0 0 1 .75.75v12a.75.75 0 0 1-1.5 0V6a.75.75 0 0 1 .75-.75m-5 3a.75.75 0 0 1 .75.75v9a.75.75 0 0 1-1.5 0V9A.75.75 0 0 1 7 8.25m10 4a.75.75 0 0 1 .75.75v5a.75.75 0 0 1-1.5 0v-5a.75.75 0 0 1 .75-.75" fill="currentColor"/></svg>
+</div>
+<h3 class="text-lg font-semibold text-zinc-900 mb-2 tracking-tight">Tokenomics e Incentivos</h3>
+<p class="text-sm text-zinc-500 font-medium leading-relaxed font-normal">Desenhe modelos econômicos sustentáveis, calcule curvas de APY e construa programas de mineração de liquidez que alinhem os interesses dos stakeholders.</p>
+</div>
+<div class="absolute right-0 bottom-0 top-0 w-full md:w-2/3 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-l from-white via-white/80 to-transparent z-10"></div>
+<div class="absolute top-[20%] right-12 w-48 h-32 bg-white border border-zinc-100 rounded-xl shadow-xl rotate-6 flex flex-col p-4 group-hover:rotate-3 group-hover:scale-105 transition-all duration-700 ease-out z-0">
+<div class="flex items-center gap-2 mb-3">
+<svg aria-hidden="true" height="1em" role="img" style="font-size:24px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4.892 9.614c0-.402.323-.728.722-.728H9.47c.4 0 .723.326.723.728a.726.726 0 0 1-.723.729H5.614a.726.726 0 0 1-.722-.729" fill="currentColor"/><path clip-rule="evenodd" d="M21.188 10.004q-.094-.005-.2-.004h-2.773C15.944 10 14 11.736 14 14s1.944 4 4.215 4h2.773q.106.001.2-.004c.923-.056 1.739-.757 1.808-1.737c.004-.064.004-.133.004-.197v-4.124c0-.064 0-.133-.004-.197c-.069-.98-.885-1.68-1.808-1.737m-3.217 5.063c.584 0 1.058-.478 1.058-1.067c0-.59-.474-1.067-1.058-1.067s-1.06.478-1.06 1.067c0 .59.475 1.067 1.06 1.067" fill="currentColor" fill-rule="evenodd"/><path d="M21.14 10.002c0-1.181-.044-2.448-.798-3.355a4 4 0 0 0-.233-.256c-.749-.748-1.698-1.08-2.87-1.238C16.099 5 14.644 5 12.806 5h-2.112C8.856 5 7.4 5 6.26 5.153c-1.172.158-2.121.49-2.87 1.238c-.748.749-1.08 1.698-1.238 2.87C2 10.401 2 11.856 2 13.694v.112c0 1.838 0 3.294.153 4.433c.158 1.172.49 2.121 1.238 2.87c.749.748 1.698 1.08 2.87 1.238c1.14.153 2.595.153 4.433.153h2.112c1.838 0 3.294 0 4.433-.153c1.172-.158 2.121-.49 2.87-1.238q.305-.308.526-.66c.45-.72.504-1.602.504-2.45l-.15.001h-2.774C15.944 18 14 16.264 14 14s1.944-4 4.215-4h2.773q.079 0 .151.002" fill="currentColor" opacity=".5"/><path d="M10.101 2.572L8 3.992l-1.733 1.16C7.405 5 8.859 5 10.694 5h2.112c1.838 0 3.294 0 4.433.153q.344.045.662.114L16 4l-2.113-1.428a3.42 3.42 0 0 0-3.786 0" fill="currentColor"/></svg>
+<span class="text-xs font-bold text-zinc-900">Pool de liquidez</span>
+</div>
+<div class="space-y-2">
+<div class="h-1.5 w-full bg-zinc-100 rounded-full overflow-hidden">
+<div class="h-full w-3/4 bg-indigo-500 rounded-full"></div>
+</div>
+<div class="h-1.5 w-full bg-zinc-100 rounded-full overflow-hidden">
+<div class="h-full w-1/2 bg-zinc-300 rounded-full"></div>
+</div>
+</div>
+<div class="mt-auto flex justify-between items-end">
+<span class="text-[10px] text-zinc-400 font-medium">APR</span>
+<span class="text-sm font-bold text-zinc-900">12,4%</span>
+</div>
+</div>
+<div class="absolute bottom-[15%] right-32 w-16 h-16 bg-white border border-zinc-100 rounded-2xl shadow-lg -rotate-12 flex items-center justify-center group-hover:-rotate-6 group-hover:translate-y-2 transition-all duration-700 delay-100 z-20">
+<svg aria-hidden="true" height="1em" role="img" style="font-size:32px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10" fill="currentColor" fill-rule="evenodd" opacity=".5"/><path d="M12.75 6a.75.75 0 0 0-1.5 0v.317c-1.63.292-3 1.517-3 3.183c0 1.917 1.813 3.25 3.75 3.25c1.377 0 2.25.906 2.25 1.75s-.873 1.75-2.25 1.75c-1.376 0-2.25-.906-2.25-1.75a.75.75 0 0 0-1.5 0c0 1.666 1.37 2.891 3 3.183V18a.75.75 0 0 0 1.5 0v-.317c1.63-.292 3-1.517 3-3.183c0-1.917-1.813-3.25-3.75-3.25c-1.376 0-2.25-.906-2.25-1.75s.874-1.75 2.25-1.75c1.377 0 2.25.906 2.25 1.75a.75.75 0 0 0 1.5 0c0-1.666-1.37-2.891-3-3.183z" fill="currentColor"/></svg>
+</div>
+</div>
+</div>
+
+<!-- bento-card-smart-contracts -->
+<div class="group relative bg-white hover:bg-zinc-50 transition-colors p-8 flex flex-col justify-between h-full min-h-[340px]">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-3 text-zinc-400">
+<svg aria-hidden="true" height="1em" role="img" style="font-size:24px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12" fill="currentColor" opacity=".5"/><path d="M13.488 6.446a.75.75 0 0 1 .53.918l-2.588 9.66a.75.75 0 0 1-1.449-.389l2.589-9.659a.75.75 0 0 1 .918-.53M14.97 8.47a.75.75 0 0 1 1.06 0l.209.208c.635.635 1.165 1.165 1.529 1.642c.384.504.654 1.036.654 1.68s-.27 1.176-.654 1.68c-.364.477-.894 1.007-1.53 1.642l-.208.208a.75.75 0 1 1-1.06-1.06l.171-.172c.682-.682 1.139-1.14 1.434-1.528c.283-.37.347-.586.347-.77s-.064-.4-.347-.77c-.295-.387-.752-.846-1.434-1.528l-.171-.172a.75.75 0 0 1 0-1.06m-7 0a.75.75 0 0 1 1.06 1.06l-.171.172c-.682.682-1.138 1.14-1.434 1.528c-.283.37-.346.586-.346.77s.063.4.346.77c.296.387.752.846 1.434 1.528l.172.172a.75.75 0 1 1-1.061 1.06l-.208-.208c-.636-.635-1.166-1.165-1.53-1.642c-.384-.504-.653-1.036-.653-1.68s.27-1.176.653-1.68c.364-.477.894-1.007 1.53-1.642z" fill="currentColor"/></svg>
+</div>
+<h3 class="text-lg font-semibold text-zinc-900 mb-2 tracking-tight">Lógica de Smart Contracts</h3>
+<p class="leading-relaxed text-sm font-medium text-zinc-500 font-normal">Escreva primitivos seguros e eficientes em gás em Solidity para AMMs, pools de empréstimo e marketplaces de NFT.</p>
+</div>
+<div class="mt-8 flex items-center justify-center py-4 relative flex-grow">
+<div class="group-hover:opacity-100 transition-opacity opacity-80 w-48 h-32 relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 bg-zinc-800 rounded-full flex items-center justify-center z-10 shadow-lg ring-4 ring-zinc-200">
+<svg aria-hidden="true" class="text-zinc-300" height="1em" role="img" style="font-size:20px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12" fill="currentColor" opacity=".5"/><path d="M6.424 9.52a.75.75 0 0 1 1.056-.096l.277.23c.605.504 1.12.933 1.476 1.328c.379.42.674.901.674 1.518s-.295 1.099-.674 1.518c-.356.395-.871.824-1.476 1.328l-.277.23a.75.75 0 1 1-.96-1.152l.234-.195c.659-.55 1.09-.91 1.366-1.216c.262-.29.287-.427.287-.513s-.025-.222-.287-.513c-.277-.306-.707-.667-1.366-1.216l-.234-.195a.75.75 0 0 1-.096-1.056M17.75 15a.75.75 0 0 1-.75.75h-5a.75.75 0 0 1 0-1.5h5a.75.75 0 0 1 .75.75" fill="currentColor"/></svg>
+</div>
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-zinc-100 border border-zinc-300 shadow-sm rounded-full flex items-center justify-center"><div class="w-3 h-3 bg-zinc-400 rounded-full"></div></div>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-zinc-100 border border-zinc-300 shadow-sm rounded-full flex items-center justify-center"><div class="w-3 h-3 bg-zinc-500 rounded-full"></div></div>
+<div class="absolute top-1/2 left-0 -translate-y-1/2 w-8 h-8 bg-zinc-100 border border-zinc-300 shadow-sm rounded-full flex items-center justify-center"><div class="w-3 h-3 bg-zinc-400 rounded-full"></div></div>
+<div class="absolute top-1/2 right-0 -translate-y-1/2 w-8 h-8 bg-zinc-100 border border-zinc-300 shadow-sm rounded-full flex items-center justify-center"><div class="w-3 h-3 bg-zinc-500 rounded-full"></div></div>
+<div class="absolute top-2 left-4 w-6 h-6 bg-zinc-200 border border-zinc-300 shadow-sm rounded-full flex items-center justify-center"><div class="w-2 h-2 bg-zinc-400 rounded-full"></div></div>
+<div class="absolute top-2 right-4 w-6 h-6 bg-zinc-200 border border-zinc-300 shadow-sm rounded-full flex items-center justify-center"><div class="w-2 h-2 bg-zinc-400 rounded-full"></div></div>
+<div class="absolute bottom-2 left-4 w-6 h-6 bg-zinc-200 border border-zinc-300 shadow-sm rounded-full flex items-center justify-center"><div class="w-2 h-2 bg-zinc-400 rounded-full"></div></div>
+<div class="absolute bottom-2 right-4 w-6 h-6 bg-zinc-200 border border-zinc-300 shadow-sm rounded-full flex items-center justify-center"><div class="w-2 h-2 bg-zinc-400 rounded-full"></div></div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none text-zinc-300" style="z-index:0"><line stroke="currentColor" stroke-width="1.5" x1="96" x2="96" y1="64" y2="16"/><line stroke="currentColor" stroke-width="1.5" x1="96" x2="96" y1="64" y2="112"/><line stroke="currentColor" stroke-width="1.5" x1="96" x2="16" y1="64" y2="64"/><line stroke="currentColor" stroke-width="1.5" x1="96" x2="176" y1="64" y2="64"/><line stroke="currentColor" stroke-width="1" x1="96" x2="32" y1="64" y2="16"/><line stroke="currentColor" stroke-width="1" x1="96" x2="160" y1="64" y2="16"/><line stroke="currentColor" stroke-width="1" x1="96" x2="32" y1="64" y2="112"/><line stroke="currentColor" stroke-width="1" x1="96" x2="160" y1="64" y2="112"/></svg>
+</div>
+</div>
+</div>
+
+<!-- bento-card-analytics -->
+<div class="group relative bg-white hover:bg-zinc-50 transition-colors p-8 flex flex-col justify-between h-full min-h-[340px] overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-3 text-zinc-400">
+<svg aria-hidden="true" height="1em" role="img" style="font-size:24px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12" fill="currentColor" opacity=".5"/><path d="M14.5 10.75a.75.75 0 0 1 0-1.5H17a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-.69l-2.013 2.013a1.75 1.75 0 0 1-2.474 0l-1.586-1.586a.25.25 0 0 0-.354 0L7.53 14.53a.75.75 0 0 1-1.06-1.06l2.293-2.293a1.75 1.75 0 0 1 2.474 0l1.586 1.586a.25.25 0 0 0 .354 0l2.012-2.013z" fill="currentColor"/></svg>
+</div>
+<h3 class="text-lg font-semibold text-zinc-900 mb-2 tracking-tight">Análise on-chain</h3>
+<p class="text-sm text-zinc-500 font-medium leading-relaxed font-normal">Consulte dados complexos de blockchain, monitore movimentos de baleias e visualize a saúde dos protocolos.</p>
+</div>
+<div class="mt-8 relative flex flex-col items-center justify-center flex-grow">
+<div class="w-full bg-zinc-50 border border-zinc-200 rounded-xl p-3 shadow-sm flex items-center gap-3 relative z-10 group-hover:shadow-md transition-all duration-300">
+<svg aria-hidden="true" class="text-zinc-400" height="1em" role="img" style="font-size:20px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"/><path d="M18.5 18.5L22 22" stroke-linecap="round"/></g></svg>
+<div class="h-2 w-20 bg-zinc-200 rounded-full"></div>
+<div class="ml-auto flex items-center gap-1.5">
+<svg aria-hidden="true" height="1em" role="img" style="font-size:14px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11.944 17.97L4.58 13.62L11.943 24l7.37-10.38l-7.372 4.35zM12.056 0L4.69 12.223l7.365 4.354l7.365-4.35z" fill="currentColor"/></svg>
+<span class="text-[10px] font-bold text-zinc-400">ETH</span>
+</div>
+</div>
+<div class="absolute -left-2 bottom-8 w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center shadow-lg group-hover:rotate-12 transition-all duration-500 delay-100 z-20">
+<svg aria-hidden="true" class="text-white" height="1em" role="img" style="font-size:20px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 10c4.418 0 8-1.79 8-4s-3.582-4-8-4s-8 1.79-8 4s3.582 4 8 4" fill="currentColor"/><path d="M4 12v6c0 2.21 3.582 4 8 4s8-1.79 8-4v-6c0 2.21-3.582 4-8 4s-8-1.79-8-4" fill="currentColor" opacity=".5"/><path d="M4 6v6c0 2.21 3.582 4 8 4s8-1.79 8-4V6c0 2.21-3.582 4-8 4S4 8.21 4 6" fill="currentColor" opacity=".7"/></svg>
+</div>
+</div>
+</div>
+
+<!-- bento-card-security -->
+<div class="group hover:bg-zinc-50 transition-colors flex flex-col min-h-[340px] bg-white h-full pt-8 pr-8 pb-8 pl-8 relative justify-between">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-3 text-zinc-400">
+<svg aria-hidden="true" height="1em" role="img" style="font-size:24px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M3.378 5.082C3 5.62 3 7.22 3 10.417v1.574c0 5.638 4.239 8.375 6.899 9.536c.721.315 1.082.473 2.101.473c1.02 0 1.38-.158 2.101-.473C16.761 20.365 21 17.63 21 11.991v-1.574c0-3.198 0-4.797-.378-5.335c-.377-.537-1.88-1.052-4.887-2.081l-.573-.196C13.595 2.268 12.812 2 12 2s-1.595.268-3.162.805L8.265 3c-3.007 1.03-4.51 1.545-4.887 2.082" fill="currentColor" opacity=".5"/><path d="M15.06 10.5a.75.75 0 0 0-1.12-1l-3.011 3.374l-.87-.974a.75.75 0 0 0-1.118 1l1.428 1.6a.75.75 0 0 0 1.119 0z" fill="currentColor"/></svg>
+</div>
+<h3 class="text-lg font-semibold text-zinc-900 mb-2 tracking-tight">Segurança de protocolo</h3>
+<p class="leading-relaxed text-sm font-medium text-zinc-500 font-normal">Identifique ataques de re-entrância, riscos de front-running e implemente arquitetura defensiva.</p>
+</div>
+<div class="mt-8 flex items-end justify-center relative flex-grow">
+<div class="flex overflow-hidden group-hover:shadow-lg transition-shadow duration-500 bg-gradient-to-b from-zinc-50 to-zinc-100 w-24 h-24 border-zinc-200 border rounded-full relative scale-50 items-center justify-center">
+<svg aria-hidden="true" height="1em" role="img" style="font-size:40px" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 16c0-2.828 0-4.243.879-5.121C3.757 10 5.172 10 8 10h8c2.828 0 4.243 0 5.121.879C22 11.757 22 13.172 22 16s0 4.243-.879 5.121C20.243 22 18.828 22 16 22H8c-2.828 0-4.243 0-5.121-.879C2 20.243 2 18.828 2 16" fill="currentColor" opacity=".5"/><path d="M8 17a1 1 0 1 0 0-2a1 1 0 0 0 0 2m4 0a1 1 0 1 0 0-2a1 1 0 0 0 0 2m5-1a1 1 0 1 1-2 0a1 1 0 0 1 2 0M6.75 8a5.25 5.25 0 0 1 10.335-1.313a.75.75 0 0 0 1.452-.374A6.75 6.75 0 0 0 5.25 8v2.055a24 24 0 0 1 1.5-.051z" fill="currentColor"/></svg>
+</div>
+<div class="absolute top-0 right-4 flex items-center gap-1.5 bg-white border border-zinc-100 px-2 py-1 rounded-full shadow-sm">
+<div class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></div>
+<span class="text-[9px] font-bold text-zinc-600 uppercase tracking-wide">Auditado</span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="w-full h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent mt-16 lg:mt-24 mb-16 lg:mb-24 opacity-60"></div>
+
+<!-- features-and-cta -->
+<div class="flex flex-col gap-16 z-10 w-full relative gap-x-16 gap-y-16">
+
+<!-- feature-grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+<div class="flex flex-col gap-4">
+<div class="text-zinc-900">
+<svg aria-hidden="true" height="28" role="img" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2" fill="currentColor" opacity=".5"/><path d="M12 6a1 1 0 0 1 1 1v4.586l2.707 2.707a1 1 0 0 1-1.414 1.414l-3-3A1 1 0 0 1 11 12V7a1 1 0 0 1 1-1" fill="currentColor"/></svg>
+</div>
+<p class="leading-relaxed text-base font-medium text-zinc-900 font-normal">Sua trilha de aprendizado se adapta com base no progresso e nas avaliações de habilidade.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="text-zinc-900">
+<svg aria-hidden="true" height="28" role="img" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12" fill="currentColor" opacity=".5"/><path d="M12 7.75a.75.75 0 0 1 .75.75v3.69l2.28 2.28a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1-.22-.53V8.5a.75.75 0 0 1 .75-.75" fill="currentColor"/></svg>
+</div>
+<p class="leading-relaxed text-base font-medium text-zinc-900 font-normal">O sistema sabe quando avançar ou pausar — com base nas zonas de domínio.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="text-zinc-900">
+<svg aria-hidden="true" height="28" role="img" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M12 22c-4.714 0-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464C22 4.93 22 7.286 22 12s0 7.071-1.465 8.535C19.072 22 16.714 22 12 22" fill="currentColor" opacity=".5"/><path d="M16.03 8.97a.75.75 0 0 1 0 1.06l-5 5a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 1 1 1.06-1.06l1.47 1.47l4.47-4.47a.75.75 0 0 1 1.06 0" fill="currentColor"/></svg>
+</div>
+<p class="leading-relaxed text-base font-medium text-zinc-900 font-normal">Chega de trocar de plataforma. Teoria, prática e laboratórios unificados.</p>
+</div>
+<div class="flex flex-col gap-4">
+<div class="text-zinc-900">
+<svg aria-hidden="true" height="28" role="img" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M19.83 8.7L12 2.1a.08.08 0 0 0-.07 0L4.17 8.7A1 1 0 0 0 4 9.6V20a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9.6a1 1 0 0 0-.17-.9" fill="currentColor" opacity=".5"/><path d="M12.75 18a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 1.5 0z" fill="currentColor"/></svg>
+</div>
+<p class="leading-relaxed text-base font-medium text-zinc-900 font-normal">Portfólio, habilidades e credenciais monitorados. Saiba sempre o seu valor.</p>
+</div>
+</div>
+
+<!-- main-cta-card -->
+<div class="overflow-hidden min-h-[500px] lg:min-h-[600px] shadow-zinc-900/30 bg-zinc-900 rounded-[2rem] relative shadow-2xl">
+<div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="grid grid-cols-1 lg:grid-cols-1 min-h-[500px] lg:min-h-[600px] relative h-full">
+<div class="flex flex-col md:p-12 lg:p-16 bg-center bg-[url(assets/a5387a0b-52c6-40c2-b3be-ef8632_5ea829d0de5b.webp)] bg-cover pt-8 pr-8 pb-8 pl-8 saturate-50 justify-center">
+<h2 class="md:text-4xl lg:text-5xl leading-tight text-3xl font-normal text-white tracking-tight mb-8">Unificamos suas missões, telemetria e insights da tripulação em um console de comando adaptativo que evolui à medida que você explora mais profundo no espaço — sem ruído, sem suposições.</h2>
+<button class="group flex items-center gap-3 bg-white hover:bg-zinc-100 transition-all text-zinc-900 text-sm font-medium rounded-full px-6 py-3 w-fit shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+<span>Experimentar grátis</span>
+<svg class="group-hover:translate-x-1 transition-transform" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+</button>
+<div class="mt-12 pt-8 border-t border-white/10">
+<p class="text-xs text-white/50 uppercase tracking-widest mb-4 font-medium">Confiado por equipes em</p>
+<div class="flex flex-wrap items-center gap-6 opacity-60">
+<img src="assets/images/svg/logo-coinbase.svg" class="w-[100px] h-[20px]" alt="Coinbase"/>
+<img src="assets/images/svg/logo-chainlink.svg" class="w-[80px] h-[20px]" alt="Chainlink"/>
+<img src="assets/images/svg/logo-uniswap.svg" class="w-[90px] h-[20px]" alt="Uniswap"/>
+</div>
+</div>
+</div>
+
+<!-- phone-mockup -->
+<div class="lg:justify-end lg:p-0 lg:pr-12 -bottom-40 lg:scale-100 hidden sm:block pt-8 pr-12 pb-8 pl-8 absolute right-0 scale-50 items-end justify-center">
+<div class="relative w-[280px] md:w-[320px] transform translate-y-8 lg:translate-y-16">
+<div class="bg-zinc-800 rounded-[2.5rem] pt-3 pr-3 pb-3 pl-3 relative shadow-2xl" style="box-shadow: 0 50px 100px -20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1)">
+<div class="relative bg-white rounded-[2rem] overflow-hidden">
+<div class="flex items-center justify-between px-6 py-3 bg-zinc-50">
+<span class="text-xs font-semibold text-zinc-900">9:41</span>
+<div class="flex items-center gap-1">
+<div class="w-4 h-2 bg-zinc-400 rounded-sm"></div>
+<svg class="text-zinc-400" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C7.5 3 3.75 4.95 1 8l11 13l11-13c-2.75-3.05-6.5-5-11-5" fill="currentColor"/></svg>
+<div class="w-6 h-3 border border-zinc-400 rounded-sm relative">
+<div class="absolute inset-0.5 bg-emerald-500 rounded-sm" style="width:70%"></div>
+</div>
+</div>
+</div>
+<div class="p-5 space-y-5">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-lg font-normal text-zinc-900 tracking-tight">Olá, Marcus</p>
+</div>
+<div class="w-8 h-8 bg-zinc-100 rounded-full flex items-center justify-center">
+<svg class="text-zinc-600" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4" fill="currentColor"/></svg>
+</div>
+</div>
+<div class="bg-zinc-700 rounded-2xl px-4 py-4">
+<p class="text-[10px] text-zinc-400 uppercase tracking-wider mb-1">Sugestão de hoje</p>
+<p class="text-base font-normal text-white tracking-tight mb-3">Concluir Módulo 3</p>
+<div class="space-y-2">
+<div class="h-1.-700 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full" style="width:65%"></div>
+</div>
+<div class="flex justify-between text-[10px]">
+<span class="text-zinc-400">2h 15m · Zona 2</span>
+<span class="text-indigo-400">65%</span>
+</div>
+</div>
+</div>
+<div class="bg-zinc-50 border border-zinc-100 rounded-2xl p-4">
+<p class="text-[10px] text-zinc-400 uppercase tracking-wider mb-1">Progresso semanal</p>
+<p class="text-xl font-normal text-zinc-900 tracking-tight mb-2">87% de carga</p>
+<div class="flex items-center gap-2">
+<div class="flex-1 h-2 bg-zinc-200 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 rounded-full" style="width:87%"></div>
+</div>
+<span class="text-[10px] text-emerald-600 font-medium">Ótimo</span>
+</div>
+</div>
+<div class="bg-zinc-50 border border-zinc-100 rounded-2xl p-4">
+<p class="text-[10px] text-zinc-400 uppercase tracking-wider mb-1">Saldo de XP</p>
+<div class="flex items-baseline gap-1">
+<p class="text-xl font-semibold text-zinc-900 tracking-tight">4.850</p>
+<span class="text-sm text-zinc-400">XP</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="w-full h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent mt-16 lg:mt-24 mb-16 lg:mb-24 opacity-60"></div>
+
+<!-- footer -->
+<footer class="z-10 w-full relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-16 lg:mb-20">
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-1">
+<h2 class="leading-none md:text-7xl lg:text-9xl text-6xl font-semibold text-neutral-800 tracking-tighter">GenLabs</h2>
+</div>
+<p class="text-znic-400 md:text-2xl text-xl font-light italic text-zinc-500">A plataforma de aprendizado—</p>
+</div>
+<div class="flex flex-col gap-4 lg:items-end lg:text-right gap-x-4 gap-y-4">
+<div class="flex items-start gap-2">
+<div class="w-2 h-2 bg-orange-500 rounded-full mt-2 animate-pulse"></div>
+<p class="leading-snug md:text-2xl text-znic-700 text-base font-light tracking-tight">Estamos atualmente implantando infraestrutura de aprendizado em órbita e operando remotamente do espaço.</p>
+</div>
+<div class="flex items-center gap-2 text-znic-500">
+<svg aria-hidden="true" height="16" role="img" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 .477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2" fill="currentColor" opacity=".5"/><path d="M12 6a1 1 0 0 1 1 1v4.586l2.707 2.707a1 1 0 0 1-1.414 1.414l-3-3A1 1 0 0 1 11 12V7a1 1 0 0 1 1-1" fill="currentColor"/></svg>
+<span class="text-sm font-medium">Hora orbital (UTC)</span>
+</div>
+<p class="md:text-5xl text-4xl font-medium text-znic-900 tracking-tighter font-mono">14:27:38</p>
+</div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+
+<!-- footer-nav -->
+<div class="flex flex-col gap-4">
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">Início</a>
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">Currículo</a>
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">Sobre</a>
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">Preços</a>
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">Comunidade</a>
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">Contato</a>
+</div>
+
+<!-- footer-legal -->
+<div class="flex flex-col gap-4">
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">Política de privacidade</a>
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">Termos de serviço</a>
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">Aviso legal</a>
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium font-normal" href="#">404</a>
+<a class="text-base text-znic-700 hover:text-orange-500 transition-colors font-medium underline decoration-znic-300 underline-offset-4 font-normal" href="#">Mais recursos</a>
+</div>
+
+<!-- footer-newsletter -->
+<div class="flex flex-col gap-4 border-znic-100 border rounded-2xl pt-6 pr-6 pb-6 pl-6 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] gap-x-4 gap-y-4">
+<h3 class="text-xl font-semibold text-znic-900 tracking-tight">Permaneça em órbita</h3>
+<p class="text-sm text-znic-500 font-medium leading-relaxed">Receba registros de missão, atualizações orbitais e novos módulos da Estação Espacial GenLabs direto na sua caixa de entrada.</p>
+<div class="flex items-center justify-between border-b border-znic-200 pb-3 mt-2 group">
+<input class="text-znic-700 placeholder:text-znic-400 outline-none flex-1 text-sm font-medium bg-transparent" placeholder="Sua frequência de e-mail" type="email"/>
+<button class="text-orange-500 hover:text-orange-600 transition-colors">
+<img src="assets/images/svg/icon-arrow-right-circle.svg" class="w-[20px] h-[20px]" alt="Enviar"/>
+</button>
+</div>
+</div>
+
+<!-- footer-social -->
+<div class="flex flex-col overflow-hidden bg-white border-znic-100 border rounded-2xl shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] gap-x-0 gap-y-0">
+<a class="group flex items-center justify-between hover:bg-znic-50 transition-colors border-znic-100 border-b pt-4 pr-5 pb-4 pl-5" href="#">
+<div class="flex items-center gap-3">
+<svg class="text-znic-400 group-hover:text-orange-500 transition-colors" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.36-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02M8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12m6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12" fill="currentColor"/></svg>
+<span class="text-base font-medium text-znic-700 group-hover:text-znic-900 transition-colors">Discord</span>
+</div>
+<svg class="text-orange-500 opacity-0 group-hover:opacity-100 group-hover:tranznic-x-1 transition-all" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m9 5l6 7l-6 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+</a>
+<a class="group flex items-center justify-between px-5 py-4 border-b border-znic-100 hover:bg-znic-50 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<svg class="text-znic-400 group-hover:text-orange-500 transition-colors" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M18.205 2.25h3.308l-7.227 8.26l8.502 11.24H16.13l-5.214-6.817L4.95 21.75H1.64l7.73-8.835L1.215 2.25H8.04l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z" fill="currentColor"/></svg>
+<span class="text-base font-medium text-znic-700 group-hover:text-znic-900 transition-colors">X</span>
+</div>
+<svg class="text-orange-500 opacity-0 group-hover:opacity-100 group-hover:tranznic-x-1 transition-all" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m9 5l6 7l-6 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+</a>
+<a class="group flex items-center justify-between px-5 py-4 border-b border-znic-100 hover:bg-znic-50 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<svg class="text-znic-400 group-hover:text-orange-500 transition-colors" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" fill="currentColor"/></svg>
+<span class="text-base font-medium text-znic-700 group-hover:text-znic-900 transition-colors">LinkedIn</span>
+</div>
+<svg class="text-orange-500 opacity-0 group-hover:opacity-100 group-hover:tranznic-x-1 transition-all" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m9 5l6 7l-6 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+</a>
+<a class="group flex items-center justify-between px-5 py-4 border-b border-znic-100 hover:bg-znic-50 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<svg class="text-znic-400 group-hover:text-orange-500 transition-colors" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z" fill="currentColor"/></svg>
+<span class="text-base font-medium text-znic-700 group-hover:text-znic-900 transition-colors">YouTube</span>
+</div>
+<svg class="text-orange-500 opacity-0 group-hover:opacity-100 group-hover:tranznic-x-1 transition-all" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m9 5l6 7l-6 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+</a>
+<a class="group flex items-center justify-between px-5 py-4 hover:bg-znic-50 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<svg aria-hidden="true" class="text-znic-400 group-hover:text-orange-500 transition-colors" height="20" role="img" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M2 12c0-3.771 0-5.657 1.172-6.828S6.229 4 10 4h4c3.771 0 5.657 0 6.828 1.172S22 8.229 22 12s0 5.657-1.172 6.828S17.771 20 14 20h-4c-3.771 0-5.657 0-6.828-1.172S2 15.771 2 12" fill="currentColor" opacity=".5"/><path d="M18.572 7.473a.75.75 0 0 1 .044 1.06l-4.142 4.47a2.75 2.75 0 0 1-4.034 0l-4.142-4.47a.75.75 0 0 1 1.1-1.016l4.143 4.469a1.25 1.25 0 0 0 1.834 0l4.142-4.47a.75.75 0 0 1 1.055-.043" fill="currentColor"/></svg>
+<span class="text-base font-medium text-znic-700 group-hover:text-znic-900 transition-colors">E-mail</span>
+</div>
+<svg class="text-orange-500 opacity-0 group-hover:opacity-100 group-hover:tranznic-x-1 transition-all" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m9 5l6 7l-6 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+</a>
+</div>
+</div>
+
+<!-- footer-copyright -->
+<div class="flex flex-col md:flex-row border-znic-100 border-t mt-12 pt-8 gap-x-4 gap-y-4 items-center justify-between">
+<p class="text-znic-400 text-sm font-normal">© 2024 GenLabs. Todos os direitos reservados.</p>
+<div class="flex items-center gap-6">
+<span class="text-xs text-znic-400 uppercase tracking-widest font-medium">Construído com</span>
+<div class="flex items-center gap-4 opacity-50">
+<img src="assets/images/svg/logo-vercel.svg" class="w-[60px] h-[14px]" alt="Vercel"/>
+<img src="assets/images/svg/logo-react.svg" class="w-[20px] h-[20px]" alt="React"/>
+</div>
+</div>
+</div>
+</footer>
+
+</main>
+
+<!-- js -->
+<!-- Image fallback handler: swaps broken <img> sources with a deterministic local fallback -->
+<script src="assets/js/image-fallback.js"></script>
+</body>
+</html>

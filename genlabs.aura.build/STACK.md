@@ -1,0 +1,11 @@
+- **Tailwind CSS** — utility-first CSS framework (v3.4.17, runtime CDN build) used for all layout, spacing, color, and responsive styling
+- **Tailwind config plugin** — registers custom 3D transform utilities (rotate-x/-y/-z, perspective-*, transform-style-*) consumed by the hero card
+- **Lucide** — icon library used via `<i data-lucide>` for arrow-right, arrow-up-right, and bell glyphs
+- **Iconify** — icon runtime that resolves Solar (duotone) icons referenced through `data-icon` attributes throughout the bento grid and feature sections
+- **Solar icon set** — duotone SVG icon family used inline for governance, tokenomics, smart contracts, analytics, security, and footer glyphs
+- **Inter** — primary sans-serif typeface (loaded via Google Fonts CSS) used across body copy and headings
+- **Custom CSS** — hand-authored rules for `.glass-panel`, `.glass-card`, `.curve-separator`, `.carousel-track` keyframe animation, and the `--border-gradient` masked-border helper
+- **Aura editor metadata** — `aura-editor-visibility-style` and `border-gradient-shared-style` blocks indicating the page was authored in the Aura visual editor
+- **Image fallback script** — vanilla JS that listens for broken `<img>` `error` events and swaps `src` to a deterministic local webp/jpg fallback
+- **WebP / JPG image assets** — local raster images stored under `assets/` for hero, avatars, testimonials, and CTA backdrops
+- **Brand SVG logos** — Coinbase, Chainlink, Uniswap, Vercel, and React mark glyphs used in the social-proof and "built with" rows
