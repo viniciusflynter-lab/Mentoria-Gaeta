@@ -5,6 +5,16 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Mentoria Gaeta - Maestria em Massoterapia</title>
     
+    <!-- VTurb Optimization -->
+    <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+    <link rel="preload" href="https://scripts.converteai.net/630262ef-422d-41b6-98eb-559c8804cc05/players/6a34aedc66e88e75bd60ecd2/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/630262ef-422d-41b6-98eb-559c8804cc05/6a34aed7f54c50898d8fa19d/main.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://license.vturb.com">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,38 +135,33 @@
                 <div class="absolute bottom-[-10%] left-[-5%] w-48 h-48 border border-[#DCD7CD] rounded-full opacity-40"></div>
                 
                 <!-- Main Video Container -->
-                <div class="relative w-full aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-w-[480px] mx-auto glass-panel rounded-[3rem] p-3.5 premium-shadow transform lg:rotate-2 hover:rotate-0 transition-all duration-700 ease-out group">
+                <div class="relative w-full aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-w-[480px] mx-auto glass-panel rounded-[3rem] p-3.5 premium-shadow transform lg:rotate-2 hover:rotate-0 transition-all duration-700 ease-out group flex items-center justify-center">
                     
                     <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden bg-[#E8E3DB]">
-                        <!-- Image placeholder for VTurb Video -->
-                        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2000&auto=format&fit=crop" 
-                             alt="Massoterapia Premium" 
-                             class="w-full h-full object-cover opacity-90 transition-transform duration-[1.5s] group-hover:scale-105 filter contrast-[1.1] saturate-[0.8] sepia-[0.15]"/>
                         
-                        <!-- Overlay gradient for depth -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#2D2D2D]/70 via-[#2D2D2D]/10 to-transparent"></div>
-
-                        <!-- Central Play Button (VTurb style) -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <button class="w-24 h-24 bg-white/10 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 shadow-[0_0_40px_rgba(0,0,0,0.15)] group-hover:shadow-[0_0_50px_rgba(255,255,255,0.25)]">
-                                <iconify-icon icon="solar:play-bold" width="36" class="ml-2"></iconify-icon>
-                            </button>
+                        <!-- VTurb Video Embed (Proporcional ao Enquadramento Vertical sem achatar) -->
+                        <div class="absolute top-0 left-1/2 h-full aspect-video -translate-x-1/2 flex items-center justify-center z-0">
+                            <vturb-smartplayer id="vid-6a34aedc66e88e75bd60ecd2" style="display: block; margin: 0; width: 100%; height: 100%; object-fit: cover;"></vturb-smartplayer>
+                            <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/630262ef-422d-41b6-98eb-559c8804cc05/players/6a34aedc66e88e75bd60ecd2/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
                         </div>
+                        
+                        <!-- Máscara Anti-Vazamento (Clipping Forçado) -->
+                        <div class="absolute inset-0 rounded-[2.5rem] border-[6px] border-[#E8E3DB] pointer-events-none z-10" style="box-shadow: inset 0 0 0 2px #E8E3DB;"></div>
+
+                        <!-- Overlay gradient for depth -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#2D2D2D]/40 via-[#2D2D2D]/5 to-transparent pointer-events-none z-10"></div>
 
                         <!-- Floating Badge Bottom -->
-                        <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-                            <div class="glass-button px-5 py-2.5 rounded-full flex items-center gap-2.5 backdrop-blur-md bg-white/80 border-white/60">
-                                <span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                        <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between z-20 pointer-events-none">
+                            <div class="glass-button px-5 py-2.5 rounded-full flex items-center gap-2.5 backdrop-blur-md bg-white/80 border-white/60 pointer-events-auto">
+                                <span class="flex h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
                                 <span class="text-[10px] font-bold text-[#2D2D2D] uppercase tracking-widest">Assista ao vídeo</span>
-                            </div>
-                            <div class="text-white/90 text-sm font-medium drop-shadow-md tracking-wide">
-                                04:20
                             </div>
                         </div>
                     </div>
                     
                     <!-- Floating Clean Container 1 -->
-                    <div class="absolute -left-6 lg:-left-12 top-[20%] glass-button p-4 md:p-5 rounded-2xl flex flex-col gap-2 shadow-xl transform -rotate-3 transition-transform hover:rotate-0 hover:-translate-y-1 duration-500">
+                    <div class="absolute -left-6 lg:-left-12 top-[20%] glass-button p-4 md:p-5 rounded-2xl flex flex-col gap-2 shadow-xl transform -rotate-3 transition-transform hover:rotate-0 hover:-translate-y-1 duration-500 z-30 pointer-events-auto">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-full bg-[#F2EFE9] flex items-center justify-center text-[#8C7A6B]">
                                 <iconify-icon icon="solar:spa-linear" width="24"></iconify-icon>
@@ -169,7 +174,7 @@
                     </div>
                     
                     <!-- Floating Clean Container 2 -->
-                    <div class="absolute -right-4 lg:-right-10 bottom-[25%] glass-button p-4 md:p-5 rounded-2xl flex flex-col gap-2 shadow-xl transform rotate-3 transition-transform hover:rotate-0 hover:-translate-y-1 duration-500">
+                    <div class="absolute -right-4 lg:-right-10 bottom-[25%] glass-button p-4 md:p-5 rounded-2xl flex flex-col gap-2 shadow-xl transform rotate-3 transition-transform hover:rotate-0 hover:-translate-y-1 duration-500 z-30 pointer-events-auto">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-full bg-[#2D2D2D] flex items-center justify-center text-[#FAF9F6]">
                                 <iconify-icon icon="solar:crown-star-linear" width="24"></iconify-icon>
