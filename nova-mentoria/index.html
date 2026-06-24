@@ -37,7 +37,7 @@
     <!-- Hero Section -->
     <main class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-12 pb-24 min-h-[calc(100vh-120px)] flex items-center">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-center w-full">
             
             <!-- Right Column: Video Focus (Order 1 on mobile, Order last on lg) -->
             <div class="lg:col-span-6 relative w-full h-full flex items-center justify-center order-1 lg:order-last z-30">
@@ -45,13 +45,13 @@
                 <div class="absolute top-[-5%] right-[-5%] w-32 h-32 border border-[#DCD7CD] rounded-full opacity-60 hidden lg:block"></div>
                 <div class="absolute bottom-[-10%] left-[-5%] w-48 h-48 border border-[#DCD7CD] rounded-full opacity-40 hidden lg:block"></div>
                 
-                <!-- Main Video Container -->
-                <div class="relative w-full aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] max-w-[500px] mx-auto bg-transparent transform lg:rotate-2 hover:rotate-0 transition-transform duration-700 ease-out group">
+                <!-- Main Video Container: Full bleed on mobile, rounded on desktop -->
+                <div class="relative w-[calc(100%+3rem)] -mx-6 md:w-full md:mx-auto aspect-[4/5] sm:aspect-video lg:aspect-[4/5] max-w-[540px] bg-transparent lg:transform lg:rotate-1 hover:rotate-0 transition-transform duration-700 ease-out group">
                     
-                    <div class="relative w-full h-full rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden bg-transparent shadow-2xl" style="-webkit-mask-image: -webkit-radial-gradient(white, black); isolation: isolate;">
+                    <div class="relative w-full h-full rounded-b-[2rem] md:rounded-[2.5rem] overflow-hidden bg-transparent shadow-2xl" style="-webkit-mask-image: -webkit-radial-gradient(white, black); isolation: isolate;">
                         
                         <!-- VTurb Video Embed -->
-                        <div class="absolute inset-0 w-full h-full flex items-center justify-center z-0 transform scale-[1.45] sm:scale-[1.35] lg:scale-[1.45]">
+                        <div class="absolute inset-0 w-full h-full flex items-center justify-center z-0 transform scale-[1.35] sm:scale-[1.1] lg:scale-[1.35]">
                             <vturb-smartplayer id="vid-6a34aedc66e88e75bd60ecd2" style="display: block; margin: 0; width: 100%; height: 100%;"></vturb-smartplayer>
                             <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/630262ef-422d-41b6-98eb-559c8804cc05/players/6a34aedc66e88e75bd60ecd2/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
                         </div>
@@ -60,10 +60,10 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-[#2D2D2D]/60 via-transparent to-transparent pointer-events-none z-10"></div>
 
                         <!-- Floating Badge Bottom - Shrinked and Centered -->
-                        <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
-                            <div class="glass-button px-4 py-1.5 rounded-full flex items-center gap-2 backdrop-blur-md bg-white/70 border-white/40 pointer-events-auto shadow-lg hover:scale-105 transition-transform cursor-pointer">
-                                <span class="flex h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
-                                <span class="text-[9px] font-bold text-[#2D2D2D] uppercase tracking-widest">Assistir ao vídeo</span>
+                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+                            <div class="glass-button px-4 py-1.5 rounded-full flex items-center gap-2 backdrop-blur-md bg-white/40 border-white/30 pointer-events-auto shadow-lg hover:scale-105 transition-transform cursor-pointer">
+                                <span class="flex h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
+                                <span class="text-[9px] font-bold text-white uppercase tracking-widest">Assistir ao vídeo</span>
                             </div>
                         </div>
                     </div>
@@ -71,57 +71,29 @@
             </div>
 
             <!-- Left Column: Copy (Order 2 on mobile, Order first on lg) -->
-            <div class="lg:col-span-6 flex flex-col items-start relative z-20 order-2 lg:order-first mt-6 lg:mt-0">
-                <!-- Tag -->
-                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-button mb-6 lg:mb-8 mx-auto lg:mx-0">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8C7A6B] opacity-50"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#8C7A6B]"></span>
-                    </span>
-                    <span class="text-xs font-semibold tracking-widest text-[#6B655B] uppercase">Mentoria Gaeta</span>
-                </div>
-
-                <!-- New Main Headline -->
-                <h1 class="text-4xl sm:text-5xl lg:text-[4rem] leading-[1.1] font-serif-elegant text-[#2D2D2D] mb-6 text-center lg:text-left w-full">
-                    Você não precisa de mais um <span class="italic text-[#8C7A6B]">curso de técnicas</span> de massagem.
+            <div class="lg:col-span-6 flex flex-col items-center lg:items-start relative z-20 order-2 lg:order-first mt-8 lg:mt-0 px-2 sm:px-0">
+                
+                <!-- Main Headline -->
+                <h1 class="text-4xl sm:text-5xl lg:text-[4.2rem] leading-[1.1] font-serif-elegant text-[#2D2D2D] mb-6 text-center lg:text-left w-full text-balance tracking-tight">
+                    Você não precisa de <br class="hidden lg:block"/>mais um <span class="italic text-[#8C7A6B] font-medium">curso de técnicas</span> de massagem.
                 </h1>
 
                 <!-- Paragraph -->
-                <p class="text-[1.05rem] lg:text-[1.15rem] text-[#5A544A] font-sans-limpa font-light leading-[1.8] max-w-xl text-balance mb-10 lg:mb-12 border-l-[3px] border-[#DCD7CD] pl-5 lg:pl-6 mx-auto lg:mx-0 text-center lg:text-left">
+                <p class="text-[1.1rem] lg:text-[1.2rem] text-[#5A544A] font-sans-limpa font-light leading-[1.7] max-w-lg text-balance mb-12 text-center lg:text-left lg:border-l-[3px] lg:border-[#DCD7CD] lg:pl-6">
                     Vá além das manobras e domine o posicionamento, o comportamento e os detalhes de atendimento que lotam a sua agenda com clientes de alto valor.
                 </p>
 
-                <!-- CTA Buttons -->
-                <div class="flex flex-col w-full sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4 sm:gap-5 lg:w-auto mx-auto lg:mx-0">
-                    <button class="group flex items-center justify-center gap-3 bg-[#2D2D2D] hover:bg-[#404040] text-[#FAF9F6] px-6 sm:px-8 py-4 sm:py-5 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto text-center">
-                        <span class="font-sans-limpa text-[12px] sm:text-[14px] font-bold tracking-[0.08em] leading-tight">QUERO ELEVAR MEU ATENDIMENTO</span>
-                        <iconify-icon icon="solar:arrow-right-linear" width="20" class="group-hover:translate-x-1 transition-transform flex-shrink-0"></iconify-icon>
-                    </button>
-                    
-                    <button class="group flex items-center justify-center gap-2.5 bg-white/40 hover:bg-white/80 backdrop-blur-md border border-[#DCD7CD]/60 px-6 sm:px-8 py-4 sm:py-5 rounded-full text-[#4A453F] transition-all hover:shadow-md w-full sm:w-auto text-center">
-                        <iconify-icon icon="solar:play-circle-linear" width="24" class="text-[#8C7A6B] group-hover:scale-110 transition-transform duration-300 flex-shrink-0"></iconify-icon>
-                        <span class="font-sans-limpa text-[13px] sm:text-[15px] font-semibold tracking-wide leading-tight">Ver depoimentos</span>
+                <!-- CTA Button - Ultra Premium -->
+                <div class="w-full sm:w-auto">
+                    <button class="group relative flex items-center justify-center gap-4 bg-[#2D2D2D] hover:bg-[#1A1A1A] text-[#FAF9F6] px-8 sm:px-10 py-5 sm:py-6 rounded-full transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(45,45,45,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(45,45,45,0.6)] hover:-translate-y-1 w-full text-center overflow-hidden">
+                        <!-- Shine effect -->
+                        <div class="absolute inset-0 -translate-x-[100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 ease-in-out"></div>
+                        
+                        <span class="font-sans-limpa text-[13px] sm:text-[15px] font-bold tracking-[0.12em] uppercase leading-none z-10">Quero Elevar Meu Atendimento</span>
+                        <iconify-icon icon="solar:arrow-right-linear" width="22" class="group-hover:translate-x-1.5 transition-transform duration-300 z-10"></iconify-icon>
                     </button>
                 </div>
                 
-                <!-- Trust indicators -->
-                <div class="mt-10 lg:mt-14 flex items-center justify-center lg:justify-start gap-5 opacity-80 mx-auto lg:mx-0">
-                    <div class="flex -space-x-3">
-                        <img src="https://i.pravatar.cc/100?img=5" class="w-10 h-10 lg:w-11 lg:h-11 rounded-full border-2 border-[#FAF9F6] object-cover" alt="Aluna"/>
-                        <img src="https://i.pravatar.cc/100?img=9" class="w-10 h-10 lg:w-11 lg:h-11 rounded-full border-2 border-[#FAF9F6] object-cover" alt="Aluna"/>
-                        <img src="https://i.pravatar.cc/100?img=1" class="w-10 h-10 lg:w-11 lg:h-11 rounded-full border-2 border-[#FAF9F6] object-cover" alt="Aluna"/>
-                    </div>
-                    <div class="flex flex-col">
-                        <div class="flex text-[#D4AF37] gap-0.5 justify-center lg:justify-start">
-                            <iconify-icon icon="solar:star-bold" width="14" class="lg:text-[16px]"></iconify-icon>
-                            <iconify-icon icon="solar:star-bold" width="14" class="lg:text-[16px]"></iconify-icon>
-                            <iconify-icon icon="solar:star-bold" width="14" class="lg:text-[16px]"></iconify-icon>
-                            <iconify-icon icon="solar:star-bold" width="14" class="lg:text-[16px]"></iconify-icon>
-                            <iconify-icon icon="solar:star-bold" width="14" class="lg:text-[16px]"></iconify-icon>
-                        </div>
-                        <span class="text-[11px] lg:text-xs font-medium text-[#6B655B] mt-1 tracking-wide text-center lg:text-left">+500 alunas transformadas</span>
-                    </div>
-                </div>
             </div>
             
         </div>
