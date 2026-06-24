@@ -35,12 +35,22 @@
 
 
     <!-- Hero Section -->
-    <main class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-12 pb-24 min-h-[calc(100vh-120px)] flex items-center">
+    <main class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 pt-12 pb-28 lg:pb-24 min-h-[calc(100vh-120px)] flex items-center justify-center">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-center w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center w-full">
             
             <!-- Right Column: Video Focus (Order 1 on mobile, Order last on lg) -->
-            <div class="lg:col-span-6 relative w-full h-full flex items-center justify-center order-1 lg:order-last z-30">
+            <div class="lg:col-span-6 relative w-full h-full flex flex-col items-center justify-center order-1 lg:order-last z-30">
+                
+                <!-- Tag (Mobile Only - Above Video) -->
+                <div class="inline-flex lg:hidden items-center gap-3 px-4 py-2 rounded-full glass-button mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8C7A6B] opacity-50"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#8C7A6B]"></span>
+                    </span>
+                    <span class="text-[10px] font-semibold tracking-widest text-[#6B655B] uppercase">Mentoria Gaeta</span>
+                </div>
+
                 <!-- Decorative Elements -->
                 <div class="absolute top-[-5%] right-[-5%] w-32 h-32 border border-[#DCD7CD] rounded-full opacity-60 hidden lg:block"></div>
                 <div class="absolute bottom-[-10%] left-[-5%] w-48 h-48 border border-[#DCD7CD] rounded-full opacity-40 hidden lg:block"></div>
@@ -73,6 +83,15 @@
             <!-- Left Column: Copy (Order 2 on mobile, Order first on lg) -->
             <div class="lg:col-span-6 flex flex-col items-center lg:items-start relative z-20 order-2 lg:order-first mt-8 lg:mt-0 px-2 sm:px-0">
                 
+                <!-- Tag (Desktop Only) -->
+                <div class="hidden lg:inline-flex items-center gap-3 px-4 py-2 rounded-full glass-button mb-8">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8C7A6B] opacity-50"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#8C7A6B]"></span>
+                    </span>
+                    <span class="text-[10px] font-semibold tracking-widest text-[#6B655B] uppercase">Mentoria Gaeta</span>
+                </div>
+
                 <!-- Main Headline -->
                 <h1 class="text-4xl sm:text-5xl lg:text-[4.2rem] leading-[1.1] font-serif-elegant text-[#2D2D2D] mb-6 text-center lg:text-left w-full text-balance tracking-tight">
                     Você não precisa de <br class="hidden lg:block"/>mais um <span class="italic text-[#8C7A6B] font-medium">curso de técnicas</span> de massagem.
@@ -83,19 +102,25 @@
                     Vá além das manobras e domine o posicionamento, o comportamento e os detalhes de atendimento que lotam a sua agenda com clientes de alto valor.
                 </p>
 
-                <!-- CTA Button - Ultra Premium -->
+                <!-- CTA Button - Ultra Premium (Single Line Forced) -->
                 <div class="w-full sm:w-auto">
-                    <button class="group relative flex items-center justify-center gap-4 bg-[#2D2D2D] hover:bg-[#1A1A1A] text-[#FAF9F6] px-8 sm:px-10 py-5 sm:py-6 rounded-full transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(45,45,45,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(45,45,45,0.6)] hover:-translate-y-1 w-full text-center overflow-hidden">
+                    <button class="group relative flex items-center justify-center gap-2 sm:gap-4 bg-[#2D2D2D] hover:bg-[#1A1A1A] text-[#FAF9F6] px-4 sm:px-8 py-5 rounded-full transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(45,45,45,0.5)] hover:shadow-[0_20px_40px_-10px_rgba(45,45,45,0.6)] hover:-translate-y-1 w-full text-center overflow-hidden">
                         <!-- Shine effect -->
                         <div class="absolute inset-0 -translate-x-[100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000 ease-in-out"></div>
                         
-                        <span class="font-sans-limpa text-[13px] sm:text-[15px] font-bold tracking-[0.12em] uppercase leading-none z-10">Quero Elevar Meu Atendimento</span>
-                        <iconify-icon icon="solar:arrow-right-linear" width="22" class="group-hover:translate-x-1.5 transition-transform duration-300 z-10"></iconify-icon>
+                        <span class="font-sans-limpa text-[11px] sm:text-[14px] font-bold tracking-[0.1em] uppercase leading-none z-10 whitespace-nowrap">Quero Elevar Meu Atendimento</span>
+                        <iconify-icon icon="solar:arrow-right-linear" width="18" class="sm:w-[22px] group-hover:translate-x-1.5 transition-transform duration-300 z-10"></iconify-icon>
                     </button>
                 </div>
                 
             </div>
             
+        </div>
+
+        <!-- Scroll Down Indicator (Transition to next section) -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 animate-bounce cursor-default pointer-events-none z-20">
+            <span class="text-[9px] font-sans-limpa tracking-[0.2em] uppercase text-[#6B655B] font-semibold">Descubra como</span>
+            <iconify-icon icon="solar:round-alt-arrow-down-linear" width="22" class="text-[#8C7A6B]"></iconify-icon>
         </div>
     </main>
 
