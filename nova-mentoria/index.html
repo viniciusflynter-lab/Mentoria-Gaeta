@@ -117,36 +117,74 @@
             
         </div>
 
-        <!-- Scroll Down Indicator (Transition to next section) -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 animate-bounce cursor-default pointer-events-none z-20">
-            <span class="text-[9px] font-sans-limpa tracking-[0.2em] uppercase text-[#6B655B] font-semibold">Descubra como</span>
-            <iconify-icon icon="solar:round-alt-arrow-down-linear" width="22" class="text-[#8C7A6B]"></iconify-icon>
-        </div>
     </main>
 
     <!-- Segunda Seção: O Jogo do Mercado -->
-    <section class="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 py-24 lg:py-32 z-10">
+    <section class="relative w-full max-w-[1400px] mx-auto px-6 md:px-12 py-16 lg:py-32 z-10 overflow-hidden">
         
-        <!-- Decorative subtle element -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-[#DCD7CD] to-transparent opacity-80"></div>
-        
-        <div class="max-w-4xl mx-auto text-center mb-24 mt-8">
-            <h2 class="text-4xl md:text-5xl lg:text-[4rem] font-serif-elegant text-[#2D2D2D] leading-[1.1] mb-8">
-                O problema <span class="italic text-[#8C7A6B]">não é você.</span><br/>
-                <span class="text-3xl md:text-4xl lg:text-5xl text-[#6B655B] font-light mt-6 block">É o jogo que o mercado te fez jogar.</span>
+        <!-- A bold, editorial heading block -->
+        <div class="max-w-4xl mx-auto mb-16 lg:mb-24">
+            <h2 class="text-5xl sm:text-6xl lg:text-[5rem] font-serif-elegant text-[#2D2D2D] leading-[1.05] tracking-tight">
+                O problema <br />
+                <span class="italic text-[#8C7A6B] font-medium">não é você.</span>
             </h2>
+            <div class="mt-8 flex items-center gap-4">
+                <div class="h-[1px] w-12 sm:w-16 bg-[#8C7A6B] opacity-50"></div>
+                <span class="text-lg sm:text-2xl text-[#6B655B] font-light font-sans-limpa tracking-wide">
+                    É o jogo que o mercado te fez jogar.
+                </span>
+            </div>
+        </div>
+        
+        <!-- Storytelling / Journey Layout -->
+        <div class="max-w-3xl mx-auto relative mt-8 lg:mt-0">
+            <!-- Vertical connecting line (Timeline effect) -->
+            <div class="absolute left-[15px] sm:left-[23px] top-6 bottom-12 w-[1.5px] bg-gradient-to-b from-[#8C7A6B]/50 via-[#8C7A6B]/30 to-transparent"></div>
             
-            <div class="w-16 h-[2px] bg-[#8C7A6B] mx-auto mb-12 opacity-60"></div>
+            <div class="space-y-12 sm:space-y-16 pl-12 sm:pl-20">
+                
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[48px] sm:-left-[80px] top-1.5 w-[32px] h-[32px] sm:w-[48px] sm:h-[48px] rounded-full bg-[#F2EFE9] border border-[#DCD7CD] flex items-center justify-center shadow-sm z-10">
+                        <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#8C7A6B]"></div>
+                    </div>
+                    <p class="text-[1.1rem] sm:text-[1.35rem] text-[#5A544A] font-sans-limpa font-light leading-[1.8]">
+                        Você já comprou cursos de novas manobras. Já investiu em cremes caros. Já passou finais de semana inteiros se especializando em técnicas diferentes.
+                    </p>
+                </div>
 
-            <div class="text-lg md:text-[1.35rem] text-[#5A544A] font-sans-limpa font-light leading-[1.8] max-w-3xl mx-auto space-y-8">
-                <p>Você já comprou cursos de novas manobras. Já investiu em cremes caros. Já passou finais de semana inteiros se especializando em técnicas diferentes.</p>
-                <p class="font-medium text-[#2D2D2D] text-2xl font-serif-elegant italic">E o resultado?</p>
-                <p>Você abre a sua agenda para a próxima semana e tudo o que vê são espaços em branco e horários vagos.</p>
-                <p>Não é falta de talento nas suas mãos. Não é falta de esforço.</p>
-                <div class="glass-button p-8 md:p-10 rounded-3xl mt-10 relative overflow-hidden text-left sm:text-center">
-                    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#8C7A6B]"></div>
-                    <p class="text-xl md:text-2xl font-serif-elegant text-[#2D2D2D] leading-snug">
-                        É que te venderam a mentira de que, para encher a sua agenda, você precisa de MAIS UM curso técnico. Mais uma manobra milagrosa. Mais um certificado na parede.
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[48px] sm:-left-[80px] top-1.5 w-[32px] h-[32px] sm:w-[48px] sm:h-[48px] rounded-full bg-[#F2EFE9] border border-[#DCD7CD] flex items-center justify-center shadow-sm z-10">
+                        <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#8C7A6B] opacity-50"></div>
+                    </div>
+                    <p class="font-medium text-[#2D2D2D] text-2xl sm:text-3xl font-serif-elegant italic mb-3">E o resultado?</p>
+                    <p class="text-[1.1rem] sm:text-[1.35rem] text-[#5A544A] font-sans-limpa font-light leading-[1.8]">
+                        Você abre a sua agenda para a próxima semana e tudo o que vê são espaços em branco e horários vagos.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[48px] sm:-left-[80px] top-1.5 w-[32px] h-[32px] sm:w-[48px] sm:h-[48px] rounded-full bg-[#F2EFE9] border border-[#DCD7CD] flex items-center justify-center shadow-sm z-10">
+                        <iconify-icon icon="solar:close-circle-line-duotone" width="20" class="text-[#8C7A6B] sm:text-[24px]"></iconify-icon>
+                    </div>
+                    <p class="text-[1.1rem] sm:text-[1.35rem] text-[#5A544A] font-sans-limpa font-light leading-[1.8]">
+                        Não é falta de talento nas suas mãos. Não é falta de esforço.
+                    </p>
+                </div>
+
+            </div>
+            
+            <!-- Impact Box / Realization (Pattern Interrupt) -->
+            <div class="mt-16 sm:mt-24 relative z-10 -ml-6 sm:-ml-8 lg:ml-0 mr-[-1.5rem] sm:mr-0">
+                <div class="bg-[#2D2D2D] text-[#FAF9F6] p-8 sm:p-12 lg:p-14 rounded-l-3xl rounded-r-none sm:rounded-[2.5rem] shadow-[0_20px_50px_-15px_rgba(0,0,0,0.3)] relative overflow-hidden transform hover:-translate-y-1 transition-transform duration-500">
+                    <!-- Subtle glow inside the dark box -->
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-[#8C7A6B] blur-[100px] opacity-20 rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+                    
+                    <iconify-icon icon="solar:danger-triangle-bold-duotone" width="40" class="text-[#D4AF37] mb-6 opacity-90 lg:text-[48px]"></iconify-icon>
+                    <p class="text-[1.3rem] sm:text-2xl lg:text-3xl font-serif-elegant leading-[1.5] text-balance text-white/90">
+                        É que te venderam a mentira de que, para encher a sua agenda, você precisa de <span class="text-[#D4AF37] font-medium border-b border-[#D4AF37]/40 pb-1">MAIS UM curso técnico.</span> Mais uma manobra milagrosa. Mais um certificado na parede.
                     </p>
                 </div>
             </div>
